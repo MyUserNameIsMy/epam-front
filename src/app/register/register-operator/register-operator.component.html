@@ -1,0 +1,45 @@
+<mat-card>
+  <mat-card-header>
+    <h2 style="justify-self: center">Register Operator</h2>
+  </mat-card-header>
+  <mat-card-content style="display: flex;
+  justify-content: center;
+  align-items: center;">
+      <form class="example-form" [formGroup]="registerForm" (ngSubmit)="registerOperator()" >
+        <div style="justify-self: center; align-items: center">
+          <mat-form-field class="example-form-full" appearance="outline">
+            <mat-label>Firstname</mat-label>
+            <input matInput formControlName="firstname" >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Lastname</mat-label>
+            <input matInput formControlName="lastname" >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password" >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Confirm password</mat-label>
+            <input type="password" matInput formControlName="confirm_password" >
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button color="primary">Submit</button>
+          <a routerLink="/login" mat-raised-button color="accent">Back to Login</a>
+        </div>
+      </form>
+  </mat-card-content>
+</mat-card>
